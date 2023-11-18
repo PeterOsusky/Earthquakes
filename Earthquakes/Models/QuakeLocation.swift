@@ -1,10 +1,9 @@
-//
-//  QuakeLocation.swift
-//  Earthquakes-iOS
-//
-//  Created by Peter on 18/11/2023.
-//  Copyright © 2023 Apple. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A structure of Quake location data.
+*/
 
 import Foundation
 
@@ -12,7 +11,6 @@ struct QuakeLocation: Decodable {
     var latitude: Double { properties.products.origin.first!.properties.latitude }
     var longitude: Double { properties.products.origin.first!.properties.longitude }
     private var properties: RootProperties
-    
     struct RootProperties: Decodable {
         var products: Products
     }
@@ -33,7 +31,6 @@ extension QuakeLocation.OriginProperties: Decodable {
         case latitude
         case longitude
     }
-    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: OriginPropertiesCodingKeys.self)
         let longitude = try container.decode(String.self, forKey: .longitude)
@@ -44,3 +41,4 @@ extension QuakeLocation.OriginProperties: Decodable {
         self.latitude = latitude
     }
 }
+

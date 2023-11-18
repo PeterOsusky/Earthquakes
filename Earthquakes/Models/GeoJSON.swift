@@ -1,28 +1,28 @@
-//
-//  GeoJSON.swift
-//  EarthquakesTests
-//
-//  Created by Peter on 18/11/2023.
-//  Copyright © 2023 Apple. All rights reserved.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+A structure for decoding quake data.
+*/
 
 import Foundation
 
 struct GeoJSON: Decodable {
-    
+
     private enum RootCodingKeys: String, CodingKey {
         case features
     }
+
     private enum FeatureCodingKeys: String, CodingKey {
         case properties
     }
-    
+
     private(set) var quakes: [Quake] = []
-    
+
     init(from decoder: Decoder) throws {
         let rootContainer = try decoder.container(keyedBy: RootCodingKeys.self)
         var featuresContainer = try rootContainer.nestedUnkeyedContainer(forKey: .features)
-        
+
         while !featuresContainer.isAtEnd {
             let propertiesContainer = try featuresContainer.nestedContainer(keyedBy: FeatureCodingKeys.self)
 
@@ -32,3 +32,4 @@ struct GeoJSON: Decodable {
         }
     }
 }
+

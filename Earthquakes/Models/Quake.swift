@@ -20,7 +20,6 @@ extension Quake: Identifiable {
 }
 
 extension Quake: Decodable {
-
     private enum CodingKeys: String, CodingKey {
         case magnitude = "mag"
         case place
@@ -28,7 +27,7 @@ extension Quake: Decodable {
         case code
         case detail
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         let rawMagnitude = try? values.decode(Double.self, forKey: .magnitude)
@@ -36,7 +35,7 @@ extension Quake: Decodable {
         let rawTime = try? values.decode(Date.self, forKey: .time)
         let rawCode = try? values.decode(String.self, forKey: .code)
         let rawDetail = try? values.decode(URL.self, forKey: .detail)
-        
+
         guard let magnitude = rawMagnitude,
               let place = rawPlace,
               let time = rawTime,
@@ -45,7 +44,7 @@ extension Quake: Decodable {
         else {
             throw QuakeError.missingData
         }
-        
+
         self.magnitude = magnitude
         self.place = place
         self.time = time
@@ -53,3 +52,5 @@ extension Quake: Decodable {
         self.detail = detail
     }
 }
+
+

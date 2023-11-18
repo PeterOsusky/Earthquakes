@@ -1,5 +1,5 @@
-# Decoding structured JSON
+# Building a network test client
 
 ## Starting Project
 
-Use this project to code along with [Decoding structured JSON](https://developer.apple.com/tutorials/app-dev-training/decoding-structured-json).
+Use this project to code along with [Building a network test client](https://developer.apple.com/tutorials/app-dev-training/building-a-network-test-client).
