@@ -25,6 +25,7 @@
 		D0ABDFBA2B08C8B5002B0EB3 /* EarthquakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABDFB92B08C8B5002B0EB3 /* EarthquakesTests.swift */; };
 		D0ABDFC12B08C8DA002B0EB3 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABDFC02B08C8DA002B0EB3 /* TestData.swift */; };
 		D0ABDFC62B08CBB8002B0EB3 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABDFC42B08CB6B002B0EB3 /* GeoJSON.swift */; };
+		D0ABDFC82B08CDBA002B0EB3 /* QuakeLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABDFC72B08CDBA002B0EB3 /* QuakeLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D0ABDFB92B08C8B5002B0EB3 /* EarthquakesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesTests.swift; sourceTree = "<group>"; };
 		D0ABDFC02B08C8DA002B0EB3 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		D0ABDFC42B08CB6B002B0EB3 /* GeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
+		D0ABDFC72B08CDBA002B0EB3 /* QuakeLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				7CC62564273C2A9200F87758 /* Quake+Color.swift */,
 				D0ABDFB12B08C63A002B0EB3 /* QuakeError.swift */,
 				D0ABDFC42B08CB6B002B0EB3 /* GeoJSON.swift */,
+				D0ABDFC72B08CDBA002B0EB3 /* QuakeLocation.swift */,
 			);
 			name = Models;
 			path = Earthquakes/Models;
@@ -301,6 +304,7 @@
 				AA988DD327E900B6004EA073 /* Quakes+Toolbar.swift in Sources */,
 				AA988DDD27E9030A004EA073 /* DeleteButton.swift in Sources */,
 				D0ABDFB22B08C63A002B0EB3 /* QuakeError.swift in Sources */,
+				D0ABDFC82B08CDBA002B0EB3 /* QuakeLocation.swift in Sources */,
 				AA988DD927E901B0004EA073 /* RefreshButton.swift in Sources */,
 				AD57B10226561FE1005183D0 /* Quakes.swift in Sources */,
 				AD43F1FA26158CD50068AABC /* Quake.swift in Sources */,
